@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Template</title>
+</head>
+<body>
+    <script>
+        // subtitution variable
+        const name = "Riana Riri Lestari";
+        const firstName = "Riana";
+        const middleName = "Riri";
+        const lastName = "Lestari";
+        const template = `Name : ${name} ${middleName}`;
+
+        console.info(template);
+
+        // Expression di String Template
+        const value = 80;
+
+        const template2 = `Name : ${name}, Lulus : ${value > 75}`;
+
+        console.info(template2);
+
+        // Multiline String
+
+        let multilineString = `
+        Nama saya adalah Riana Lestari
+        Biasa dipanggil Riri
+        Hari ini saya belajar membuat Multiline String
+        `;
+
+        document.writeln("<pre>");
+        document.writeln(multilineString);
+        document.writeln("</pre>");
+
+    </script>
+</body>
+</html>
