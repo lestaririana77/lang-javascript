@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi String dan Number</title>
+</head>
+<body>
+    <script>
+
+        const value1 = "1";
+        const value2 = 1;
+        const sum = value1 + value2;
+
+        document.writeln(`<p>${sum}</p>`); // salah, karena merupakan 2 tipe data yang berbeda
+
+            /* function:
+            -parseInt(string)   = mengkonversi dari string ke number (bil.bul)
+            -parseFloat(string) = mengkonversi dari string ke number (bil.pecahan)
+            -Number(string)     = mengkonversi dari string ke number (bil.bul atau pecahan)
+            -number.toString()  = mengkonversi dari number ke string. */
+
+            // ini konversi dari string to number
+            document.writeln(`<p>${parseInt("1.1")}</p>`);
+            document.writeln(`<p>${parseFloat("1.1")}</p>`);
+            document.writeln(`<p>${Number("1.1")}</p>`);
+
+            // ini konversi dari number to string
+            const a = 1;
+            const b = 1;
+            const total = a.toString() + b.toString();
+            document.writeln(`<p>${total}</p>`);
+
+            // NaN = Not a Number
+            document.writeln(`<p>${parseInt("salah")}</p>`); // dibaca sebagai NaN bukan error
+            document.writeln(`<p>${parseFloat("1.1riana")}</p>`); // untuk parse masih bisa mentoleril sedikit kesalahan asalkan karakter awalnya masih angka
+            document.writeln(`<p>${Number("1.1cantik")}</p>`); // number sama sekali tidak mentoleril sedikitpun kesalahan. just for number
+
+            // operasi NaN
+            const first = Number("salah");
+            const last = 100;
+            const totalNumber = first + last;
+
+            document.writeln(`<p>${totalNumber}</p>`);
+
+            // function isNan = untuk mengetahui apakah NaN number atau bukan. return dlm bentuk boolean (dapat divariablekan)
+            document.writeln(`<p>${isNaN(first)}</p>`);
+            document.writeln(`<p>${isNaN(last)}</p>`);
+            document.writeln(`<p>${isNaN(totalNumber)}</p>`);
+    </script>
+</body>
+</html>
