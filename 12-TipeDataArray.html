@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data Array</title>
+</head>
+<body>
+    <script>
+
+        let arrayKosong = [];
+
+        let arrayNama = ["Riana", "Riri", "Lestari", 1, true]; // bisa string, number, dan value apapun
+
+        const names = [];
+        names.push("Riana");
+        names.push("Riri", "Lestari");
+        names.push("elizabeth", "diana");
+
+        console.table(names);
+
+        /* Operasi Array
+        array.push(value)       = menambah data ke array
+        array.length            = untuk mendapatkan panjang array
+        array[index]            = mendapat data di posisi index
+        array[index] = value    = mengubah data di posisi index
+        delete array[index]     = menghapus data di posisi index, namun index tidak bergeser */
+        
+        console.info(names[0]); // mendapatkan data di-index ..
+        console.info(names[1]);
+        console.info(names[2]);
+
+        names.length;
+
+        names[3] = "lilibeth"; // mengubah data index
+
+        delete names[1]; // menghapus data index
+
+        console.table(names); // output
+
+        names[1] = "Riri lagi";
+
+        names.push(1, 2, 3); // tipe data number
+        names.push(["riana", "riri", "lestari"]); // array dalam array
+
+        console.table(names);
+
+    </script>
+</body>
+</html>
