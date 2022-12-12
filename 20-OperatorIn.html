@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator In</title>
+</head>
+<body>
+    <script>
+// operator in untuk menentukan apakah suatu properti ada di dalam object atau tidak.
+// hasilnya berupa data boolean.
+// Juga bisa mengecek index array tapi tidak lazim digunakan.
+
+    const person = {
+        firstName: "Riana",
+        lastName: "Lestari"
+    }
+    if ("firstName" in person) {
+        alert(`Hello ${person.firstName}`);
+    } else {
+        alert(`Hello`);
+    }
+
+    const orang = {
+            nama: "Riana",
+            umur: 22
+        }
+        const result = "nama" in orang; //true
+        document.writeln(`<p>${result}</p>`);
+
+// operator in cuma untuk mengecek apakah sebuah properti atau index ada atau tidak (tidak peduli value nya apa).
+// jadi meskipun value nya undefined atau null tetap dianggap ada.
+
+    const student = {
+        firstName: "Riana",
+        middleName: undefined,
+        lastName: "Lestari"
+    };
+
+    if ("middleName" in student) {
+        alert(`Hello ${student.middleName}`);
+    } else {
+        alert("Hello Student");
+    }
+
+    const names = [null, "Riana", null];
+    const results = 0 in names; //true
+    document.writeln(`<p>${results}</p>`);
+    </script>
+</body>
+</html>
