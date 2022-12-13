@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Falsy dan Truthy</title>
+</head>
+
+<body>
+    <script>
+        // Falsy adalah suatu keadaan dimana sebuah konteks dapat dianggap ke dalam bentuk boolean.
+        // Tidak hanya berlaku untuk data boolean saja tapi bisa juga tipe data yang lain.
+        // Data dianggap Falsy ketika :
+        // - false (bentuk data boolean false)
+        // - 0, -0 (number o, -0 dianggap false)
+        // - "", '', `` (semua string kosong dianggap false)
+        // - null
+        // - undefined
+        // - NaN
+        // Sedangkan untuk Truthy adalah kondisi sebaliknya dari Falsy
+
+        let data = "";
+
+        if (data) {
+            document.writeln("<p>True</p>");
+        } else {
+            document.writeln("<p>False</p>");
+        }
+        // ==================================
+
+        let nama = {};
+
+        if (nama) {
+            document.writeln("<p>True</p>");
+        } else {
+            document.writeln("<p>False</p>");
+        }
+        // ===================================
+        let orang = null;
+
+        if (orang) {
+            document.writeln("<p>True</p>");
+        } else {
+            document.writeln("<p>False</p>");
+        }
+
+        // ===================================
+        let addres;
+
+        if (addres) {
+            document.writeln("<p>True</p>");
+        } else {
+            document.writeln("<p>False</p>");
+        }
+    </script>
+</body>
+
+</html>
