@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do While loop</title>
+</head>
+<body>
+    <script>
+        // mirip dgn while, perbedaannya di pengecekan kondisi.
+        // pada while loop pengecekan kondisi di awal sebelum perulangan dilakukan, sedangkan di do while loop setelah perulangan dilakukan
+        // oleh karena itu dalam do while loop, minimal pasti sekali perulangan dilakukan walaupun kondisi tidak bernilai true.
+
+        let counter = 1
+        do {
+            document.writeln(`<p>Perulangan ke ${counter}</p>`);
+            counter++
+        }
+        while (counter <= 10);
+
+        // jika memasukan data false, akan dieksekusi min. sekali perulangannya..
+        // karena sintak do merunning mengeksekusi do nya dulu baru mengecek kondisinya
+    </script>
+</body>
+</html>

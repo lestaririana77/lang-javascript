@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continue</title>
+</head>
+<body>
+    <script>
+        // Di switch statement sudah dipelajari kata kunci break, untuk menghentikan case dalam switch
+        // Dalam perulangan break digunakan untuk menghentikan seluruh perulangan
+        // Continue digunakan untuk menghentikan perulangan saat ini, kemudian melanjutkan ke perulangan berikutnya.
+        
+        // CONTINUE
+        for (let i = 1; i <= 100; i++) {
+            if (i % 2 === 0) {
+                continue;
+            }
+            document.writeln(`<p>Perulangan Ganjil ${i}</p>`);
+        }
+
+        // Tetap akan mengeksekusi post statement, kemudian continue dan perulangannya
+    </script>
+</body>
+</html>

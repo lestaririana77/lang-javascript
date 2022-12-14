@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Of</title>
+</head>
+<body>
+    <script>
+        // For of = melakukan iterasi terhadap value dari iterable object seperti array, string dll
+        // For of tidak bisa digunakan untuk melakukan iterasi data object karena object bukanlah iterable.
+
+        const names = ["Riana", "Riri", "Lestari"];
+
+        for (const name of names) {
+            document.writeln(`<p>${name}</p>`);
+        }
+
+        const fullName = "Riana Lestari";
+
+        for (const character of fullName) {
+            document.writeln(`<p>${character}</p>`);
+        }
+    </script>
+</body>
+</html>
