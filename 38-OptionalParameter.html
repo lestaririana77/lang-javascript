@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optional Parameter</title>
+</head>
+<body>
+    <script>
+        // parameter bersifat optional artinya bisa tidak memberi value terhadap parameter
+        function sayHello(firstName, middleName, lastName){
+            document.writeln(`<p>${firstName}</p>`);
+            document.writeln(`<p>${middleName}</p>`);
+            document.writeln(`<p>${lastName}</p>`);
+        }
+
+        sayHello("Riana"); // hanya ada 1 parameter, jadi hanya ada firstName
+        // untuk yg middle dan last tidak ada parameternya, tidak akan jadi error hanya akan bernilai undefined
+        // terlihat menguntungkan tapi bisa juga bahaya karna tidak terlihat tanda error
+    </script>
+</body>
+</html>

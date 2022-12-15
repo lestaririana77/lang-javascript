@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Default Parameter</title>
+</head>
+<body>
+    <script>
+        function register(name, gender = "UNKNOWN" /* default */ ){
+            document.writeln(`<p>${name}</p>`);
+            document.writeln(`<p>${gender}</p>`);
+        }
+
+        register();
+        register("Riana", "FEMALE");
+        register("Adek");
+        register("Riri", undefined);
+    </script>
+</body>
+</html>
