@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<body>
+    <script>
+        const sayHello = (name) => {
+            const say = `Hello ${name}`;
+            console.info(say);
+        }
+
+        sayHello("Riana");
+
+        // versi lebih sederhana apabila hanya 1 baris
+        // const kenalan = (name) => console.info(`Hello ${name}`);
+        const kenalan = name => console.info(`Hello ${name}`); // pada arrow function jika hanya ada 1 parameter tidak wajib pake tanda kurung, tapi kalau parameter kosong/ lebih dari 1 wajib pakai tanda kurung
+
+
+
+        kenalan("Riana");
+
+        // Arrow Function Return Value
+        // const sum = (first, second) => {
+        //     return first + second;
+        // }
+
+        const sum = (first, second) => first + second;
+
+        console.info(sum(10, 10));
+
+        // Arrow Function sebagai Parameter
+        function giveMeName(callback){
+            callback("Riana");
+        }
+
+        // Anonymous Function
+        // giveMeName(function (name) {
+        //     console.info(`Hi ${name}`);
+        // })
+
+        // arrow function
+        giveMeName(name => console.info(`Hai ${name}`));
+    </script>
+</body>
+</html>

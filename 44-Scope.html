@@ -1,25 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scope</title>
 </head>
+
 <body>
     <script>
         // global scope
         let counter = 0;
 
-        function hitMe(){
+        function hitMe() {
             // local scope function hitMe
             counter++; // we can access
         }
 
         hitMe();
         hitMe();
+        hitMe();
 
         document.writeln(counter);
+
+        // Local Scope
+        function first() {
+            let firstVariable = "first";
+        }
+        function second() {
+            let secondVariable = "second";
+        }
+
+        first();
+        second();
+
+        // console.info(firstVariable); // cannot access local scope
+        // console.info(secondVariable); // cannot access local scope
+
+        // NESTED FUNCTION SCOPE
+        function name() {
+            let firstName = "Riana";
+
+            function surname() {
+                console.info(firstName); // can access local scope first function
+                                        // karena ini masih di dalam function name jadi, bisa diakses
+                let lastName = "Lestari";
+            }
+            surname();
+            console.info(lastName); // ERROR tidak bisa diakses disini
+        }
+        name();
     </script>
 </body>
+
 </html>
