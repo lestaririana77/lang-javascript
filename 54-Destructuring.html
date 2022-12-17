@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+    <script>
+        // Destructuring = digunakan untuk membongkar value-value di array atau di object ke dalam variable-variable
+        // Fitur ini sangat mempermudah jika ingin mengambil data dari array atau object tanpa harus melakukan pengambilan data satu persatu
+
+        {
+        // tanpa destructuring
+        
+            const nama = ["Riana", "Lestari"];
+        const namaAwal = nama[0];
+        const namaAkhir= nama[1];
+
+        console.info(namaAwal);
+        console.info(namaAkhir);
+        }
+
+        {
+        // Destructuring Array
+        
+            const names = ["Riana","Riri", "Lestari", "Adek", "Kristiyanto"];
+        const [namaAwal, namaTengah, namaAkhir, ...others] = names;
+
+        console.info(namaAwal);
+        console.info(namaTengah);
+        console.info(namaAkhir);
+        console.info(others);
+        }
+
+        {
+        // Mengambil data di object
+        
+            const person = {
+            firstName: "Riana",
+            lastName: "Lestari",
+            address: {
+                street: "Jl Buah",
+                city: "Jakarta",
+                country: "Indonesia"
+            },
+            hobby: "Musik",
+            sosmed: "WhatsApp"
+        };
+
+        const firstName = person.firstName;
+        const lastName = person.lastName;
+        }
+
+        {
+        // Destructuring Object
+        
+            const person = {
+            firstName: "Riana",
+            lastName: "Lestari",
+            address: {
+                street: "Jl Buah",
+                city: "Jakarta",
+                country: "Indonesia"
+            },
+            hobby: "Musik",
+            sosmed: "WhatsApp"
+        }
+        const {firstName, lastName, address, ...other} = person;
+        console.info(firstName);
+        console.info(lastName);
+        console.info(address);
+        console.info(other);
+    }
+
+    {
+        // Destructuring Nested Object
+        const person = {
+            firstName: "Riana",
+            lastName: "Lestari",
+            address: {
+                street: "Jl Buah",
+                city: "Jakarta",
+                country: "Indonesia"
+            },
+            hobby: "Musik",
+            sosmed: "WhatsApp"
+        }
+        const {firstName, lastName, address: {country, city, street}, ...other} = person;
+        console.info(firstName);
+        console.info(lastName);
+        console.info(country);
+        console.info(city);
+        console.info(street);
+        console.info(other);
+        }
+
+        {
+            // Destructuring di Function Parameter (1)
+            function displayPerson({firstName, middleName, lastName}) {
+                console.info(firstName);
+                console.info(middleName);
+                console.info(lastName);
+            }
+
+            const person = {
+                firstName: "Riana",
+                middleName: "Riri",
+                lastName: "Lestari"
+            };
+            displayPerson(person);
+        }
+
+        {
+            // Destructuring di Function Parameter (2)
+            function sum([first, second]) {
+                return first + second;
+            }
+
+            console.info(sum([10, 10]))
+            console.info(sum([20, 10]))
+        }
+
+        {
+            // Default Value Destructuring Array
+            const names = ["Riana", "Lestari"];
+            const [firstName, middleName, lastName = "Riri"] = names;
+
+            console.info(firstName);
+            console.info(middleName);
+            console.info(lastName);
+        }
+
+        {
+            // Menggunakan Nama Variable Lain
+            const person = {
+                firstName: "Riana",
+                middleName: "kak",
+                lastName: "Lestari"
+            };
+
+            let {
+                firstName: namaDepan,
+                middleName: namaTengah = "Riri",
+                lastName: namaBelakang} = person;
+            
+            console.info(namaDepan);
+            console.info(namaTengah);
+            console.info(namaBelakang);
+        }
+    </script>
+</body>
+</html>
