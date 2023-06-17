@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data String</title>
+</head>
+<body>
+    <script>
+        // Note :
+        // write itu untuk 1 baris
+        // writeln untuk baris selanjutnya
+        // String tipe data yang beerisikan kosong atau karakter
+        // menggunakan petik 2 atau petik 1 atau backtick
+
+        document.write("test1 : pakia petik 2");
+        document.write("</br>");
+        document.writeln('test2 : pakai petik 1');
+        document.write('</br>');
+        document.writeln(`test3 : pakai backtick`);
+        document.write(`</br>`);
+
+        // menambahkan string concat
+        document.writeln(`Riana` + " Les" + 'tari');
+        document.writeln('</br>');
+
+        //Escpe Sequence di String (khusus String)
+        document.writeln(`\n` + "-->" + `ENTER`);
+        document.writeln('</br>');
+        document.writeln(`\t` + "-->" + 'TAB');
+        document.writeln('</br>');
+        document.writeln(`\'` + "-->" + 'petik 1');
+        document.writeln('</br>');
+        document.writeln(`\"` + "-->" + 'petik 2');
+        document.writeln('</br>');
+        document.writeln(`\\` + "-->" + 'slah kiri');
+        document.writeln('</br>');
+        // contohnya :
+
+        document.write("<textarea cols='100' rows='8'>");
+        document.write(" Riana \n Les \n tari");
+        document.writeln('\n');
+        document.writeln("\\Riana \\ Lestari");
+        document.writeln("\"Riana Lestari\"");
+        document.writeln("\'Riana Lestari\'");
+        document.write("</textarea>");
+
+        //String template
+        let a = 90;
+        document.write("<textarea cols='50' rows = '4'>");
+        document.writeln('INI STRING TEMPLATE');
+        document.writeln(`Selamat nilai anda ${a}`);
+        document.write("</textarea>");
+    </script>
+</body>
+</html>
